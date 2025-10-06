@@ -10,4 +10,4 @@
 Nom Du produit : Cruxix
 
 Description: Il s'agit d'un concept de réinvention du véhicule automobile. 
-Cruxix est une voiture intelligente ayant la particularité de ne pas avoir de volant.
+Cruxix est une voiture intelligente ayant la particularité de ne pas avoir de volant et de se recharger en se déplaçant.
