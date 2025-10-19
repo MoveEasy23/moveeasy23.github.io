@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f2f2f2;
+  color: #111;
+  overflow-x: hidden;
+}
+/*
+.header_container{
+    display: grid;
+    gap: 2rem;
+    overflow: hidden;
+}
+
+.header_image img{
+    max-width: 600px;
+    margin-inline: auto;
+}
+
+.header_content h1{
+    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.header_content .section_description{
+    margin-bottom: 2rem;
+}
+.header_button {
+    text-align: center;
+}
+
+
+@media (width > 768px) {
+    .header_container{
+        grid-template-columns: 2fr 3fr;
+        align-items: center;
+    }
+
+    .header_content h1, 
+    .header_content .description,
+    .header_button{
+        text-align: left;
+    }
+
+    .header_image{
+        grid-area: 1/2/2/3;
+    }
+    
+}
+
+
+
+.section_container{
+    max-width: max-content;
+}
+
+
+
+.description{
+    line-height: 1.75rem;
+
+} */
+
+.hero {
+  width: 100vw;                /* occupe toute la largeur */
+  min-height: 90vh;            /* prend presque tout l’écran */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  max-width: 500px;
+}
+
+.text h1 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+}
+
+.text h1 span {
+  color: #0056ff;
+}
+
+.text p {
+  margin: 20px 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+.image-container {
+  position: relative;
+  width: 50%;
+}
+
+.btn {
+  background: #0056ff;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #0041c2;
+}
+
+.car {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 600px;
+  transform: translateX(50px);
+}

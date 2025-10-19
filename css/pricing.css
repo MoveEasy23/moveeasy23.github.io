@@ -1,0 +1,159 @@
+ :root { 
+            --primary-color: #6c757d; /* Gris pour les actions/bordures */
+            --success-color: #888888; /* Gris pour les coches */
+            --card-bg: #ffffff; /* Fond de carte blanc */
+            --text-dark: #212529;
+            --border-color: #e9ecef; 
+        }
+
+        body.bg-light { 
+            background-color: #ffffff !important; 
+            color: var(--text-dark); 
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+       
+        .navigateur {
+            background-color: #ffffff !important;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .navbar-brand, .nav-link {
+            color: var(--text-dark) !important;
+        }
+       
+        .nav-link.active {
+             font-weight: bold; /* Garde une indication de l'actif */
+             color: var(--text-dark) !important; 
+        }
+        
+        /* Layout and Structure (for Pricing Content) */
+        .main-content {
+            padding-top: 80px; 
+            padding-bottom: 80px; 
+            min-height: 100vh;
+        }
+        
+        .container-custom {
+            max-width: 1280px; 
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 15px;
+        }
+
+        /* Header Section */
+       .header-layout {
+            text-align: center; /* Centre le texte */
+            margin-bottom: 64px; /* Marge en bas  */
+            padding-top: 40px;   /* Rembourrage en haut */
+        }
+
+        .title-h1 {
+            font-size: 2.5rem; 
+            font-weight: bold; 
+            margin-bottom: 1rem; 
+            letter-spacing: -0.025em; 
+            color: var(--text-dark);
+        }
+
+        .subtitle-p {
+            font-size: 1.125rem; 
+            line-height: 1.75rem; 
+            color: var(--primary-color); 
+            max-width: 640px; 
+            margin: 0 auto;
+        }
+        
+        /*  Pricing Grid (4-column layout for larger screens) */
+        .pricing-grid {
+            display: grid;
+            gap: 20px; 
+            max-width: 1000px; 
+            margin: 0 auto;
+            grid-template-columns: 1fr; 
+        }
+        
+        @media (min-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr); 
+            }
+        }
+        @media (min-width: 1024px) {
+            .pricing-grid {
+                grid-template-columns: repeat(4, 1fr); 
+            }
+        }
+
+        /*  Cartes (Mockup Look)  */
+        .simple-card {
+            background: var(--card-bg); 
+            /* Utilisation de la couleur primaire pour rendre les bordures grises et visibles */
+            border: 1px solid var(--primary-color);
+            border-radius: 0; /* Plus carré */
+            padding: 20px; 
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            transition: all 0.2s;
+        }
+        /* Mise en évidence de la carte Premium (2px) 
+        .highlight-card {
+            border: 2px solid var(--primary-color) !important;
+        }*/
+
+        /* Contenu de la Carte */
+        .card-header { margin-bottom: 15px; }
+        .card-title { font-size: 1.5rem; font-weight: 700; color: var(--text-dark); }
+        .price-display { margin-top: 10px; }
+        .price-main { 
+            font-size: 2.5rem; 
+            font-weight: 800; 
+            color: var(--primary-color); /* Prix en gris */
+        }
+        .price-currency { 
+            font-size: 0.9rem; 
+            color: var(--primary-color); 
+            margin-left: 5px; 
+        }
+        
+        /* STYLE POUR LE PARAGRAPHE DE LOREM IPSUM */
+        .card-content-paragraph {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid var(--primary-color); /* Séparateur gris */
+            margin-bottom: 20px; 
+            flex-grow: 1; /* Permet au bouton de rester en bas */
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .card-content-paragraph p {
+            margin: 0;
+            text-align: justify;
+        }
+        
+        /*  Boutons gris */
+        .btn-mockup { 
+            width: 100%;
+            padding: 10px 15px; 
+            font-weight: 600; 
+            border-radius: 0; /* Carré */
+            transition: all 0.2s;
+            cursor: pointer;
+            margin-top: auto;
+        }
+        .btn-main {
+            background-color: var(--primary-color);
+            color: white;
+            border: 1px solid var(--primary-color);
+        }
+        /*.btn-main:hover { background-color: #5a6268; }  Gris plus foncé au survol */
+
+        .btn-secondary-mockup {
+            background-color: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        /*.btn-secondary-mockup:hover {
+            background-color: rgba(108, 117, 125, 0.1);
+        }*/
