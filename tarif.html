@@ -15,6 +15,7 @@
     <!-- feuilles de styles -->
     <!-- css -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/pricing.css">
     <!-- liens pour pouvoir utiliser les differents fonts(police de caractères) de google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,237 +25,7 @@
 
     <!-- CSS CUSTOM POUR LA GRILLE TARIFAIRE (AJOUTÉ ICI) -->
     <style>
-        /* CSS Pur pour les cartes tarifaires modernes */
-
-        /* --- Global Variables and Body Styling --- */
-        :root { 
-            --primary: #00cc66; /* Vert vif pour l'accentuation et le survol (NOUVEAU) */
-            --light-background: #ffffff; /* Fond de la page: Blanc */
-            --dark-card-bg: #014078; /* Fond des cartes: Bleu Marine plus clair (MIS À JOUR) */
-            --light-text: #ffffff; /* Texte à l'intérieur des cartes sombres */
-            --dark-text: #212529; /* Texte standard sur fond clair */
-            --muted-light-text: #a0a0a0; /* Texte secondaire à l'intérieur des cartes */
-        }
-        
-        /* Définit le fond de la page en clair et la couleur du texte standard en foncé */
-        body.bg-light { 
-            background-color: var(--light-background) !important; 
-            color: var(--dark-text); 
-            line-height: 1.6;
-            min-height: 100vh;
-        }
-
-        /* Ajustement de la barre de navigation pour le fond clair */
-        .navigateur {
-            background-color: var(--light-background) !important;
-            border-bottom: 1px solid #eee;
-        }
-        .navbar-brand, .nav-link {
-            color: var(--dark-text) !important; /* Texte de la nav en foncé */
-        }
-        .nav-link.active {
-             color: var(--primary) !important; /* Lien actif en Vert */
-        }
-        
-        /* --- Layout and Structure (for Pricing Content) --- */
-        .main-content {
-            padding-top: 80px; 
-            padding-bottom: 80px; 
-            padding-left: 16px; 
-            padding-right: 16px; 
-            min-height: 100vh;
-        }
-        
-        .container-custom {
-            max-width: 1280px; 
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        @media (min-width: 768px) {
-            .main-content {
-                padding-left: 24px; 
-                padding-right: 24px; 
-            }
-        }
-
-        /* --- Header Section (Texte sur fond clair) --- */
-        .title-h1 {
-            font-size: 2.25rem; 
-            line-height: 2.5rem; 
-            font-weight: 800; 
-            margin-bottom: 16px; 
-            letter-spacing: -0.025em; 
-            color: var(--dark-text); /* Titre en foncé sur fond clair */
-        }
-
-        .subtitle-p {
-            font-size: 1.125rem; 
-            line-height: 1.75rem; 
-            color: #6c757d; /* Gris clair sur fond clair */
-            max-width: 640px; 
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        /* --- Pricing Grid (2x2 Layout) --- */
-        .pricing-grid {
-            display: grid;
-            gap: 60px; 
-            max-width: 760px; 
-            margin-left: auto;
-            margin-right: auto;
-            grid-template-columns: 1fr; 
-        }
-        
-        @media (min-width: 768px) {
-            .pricing-grid {
-                grid-template-columns: repeat(2, 1fr); 
-            }
-        }
-
-        /* --- Cartes Sombres (Glass Card, Gradient, Glow) --- */
-        .glass-card {
-            background: var(--dark-card-bg); /* Fond sombre : Bleu Marine (MIS À JOUR) */
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-            border-radius: 12px;
-            color: var(--light-text); /* Texte intérieur en blanc */
-        }
-
-        .pricing-card {
-            padding: 24px; 
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            transition: all 0.3s ease-in-out;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        /* Effet de survol : Bords verts */
-        .pricing-card:hover {
-            box-shadow: 0 0 20px rgba(0, 204, 102, 0.4); /* Glow Vert */
-            border-color: var(--primary) !important; /* Bordure Verte */
-            transform: scale(1.01);
-        }
-
-        /* Carte Premium (Active) */
-        .glow-effect {
-            border-width: 2px !important; 
-            border-color: var(--primary) !important;
-            box-shadow: 0 0 25px rgba(0, 204, 102, 0.6), inset 0 0 10px rgba(0, 204, 102, 0.4);
-            transform: scale(1.02);
-        }
-        
-        .gradient-text {
-            /* Mise à jour du dégradé pour utiliser la nouvelle couleur primaire verte */
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            background-image: linear-gradient(to right, #ffffff, var(--primary)); 
-        }
-
-        /* --- Card Content --- */
-        .card-header { margin-bottom: 20px; }
-        .card-title { font-size: 1.875rem; font-weight: 700; color: var(--light-text); } /* Texte intérieur blanc */
-        .price-display { margin-top: 16px; }
-        .price-main { font-size: 3rem; font-weight: 800; }
-        .price-currency { 
-            font-size: 1.25rem; 
-            color: var(--muted-light-text); /* Texte intérieur gris clair */
-            margin-left: 8px; 
-        }
-        
-        .feature-list {
-            margin-top: 20px; 
-            padding-top: 20px; 
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            margin-bottom: 16px; 
-            flex-grow: 1;
-        }
-        .feature-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px; 
-            margin-bottom: 8px; 
-        }
-        .feature-text { 
-            color: rgba(255, 255, 255, 0.8); /* Texte intérieur blanc */
-            font-size: 0.875rem; 
-        }
-        .feature-icon {
-            color: #4CAF50; /* Garde la coche en vert pour le succès */
-            margin-top: 2px;
-            flex-shrink: 0;
-        }
-
-        /* --- Buttons --- */
-        .btn-custom { 
-            width: 100%;
-            padding: 12px 16px; 
-            font-weight: 600; 
-            border-radius: 8px; 
-            transition: all 0.2s ease-in-out;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-            border: none;
-        }
-        /* Bouton principal (actif) */
-        .btn-primary-custom {
-            background-color: var(--primary);
-            color: white;
-        }
-        .btn-primary-custom:hover {
-            background-color: #00a352; /* Vert plus foncé au survol */
-        }
-        /* Bouton secondaire (contour) */
-        .btn-outline-custom {
-            background-color: transparent;
-            border: 1px solid rgba(255, 255, 255, 0.3); /* Contour blanc sur fond sombre */
-            color: white;
-        }
-        .btn-outline-custom:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        /* --- Financing Options (Utilise aussi la classe glass-card pour être sombre) --- */
-        .mt-20 { margin-top: 80px; }
-        .financing-options {
-            padding: 32px; 
-            max-width: 640px; 
-            margin-left: auto;
-            margin-right: auto;
-            transition: all 0.3s ease-in-out;
-        }
-        /* Effet de survol sur la section financement : Vert */
-        .financing-options:hover {
-            box-shadow: 0 0 20px rgba(0, 204, 102, 0.4); /* Glow Vert */
-            border-color: var(--primary) !important; /* Bordure Verte */
-        }
-        .financing-grid {
-            display: grid;
-            gap: 32px; 
-            grid-template-columns: 1fr;
-        }
-        @media (min-width: 640px) {
-            .financing-grid {
-                grid-template-columns: repeat(3, 1fr); 
-            }
-        }
-        .financing-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        .text-4xl { font-size: 2.25rem; }
-        .mb-4 { margin-bottom: 16px; }
-        .font-bold { font-weight: 700; }
-        .mb-2 { margin-bottom: 8px; }
-        .text-sm { font-size: 0.875rem; }
-        .financing-options .text-sm { color: var(--muted-light-text); } /* Texte sombre en gris clair */
-
+       
     </style>
 </head>
 
@@ -268,9 +39,9 @@
             </a>
             <div class="collapse navbar-collapse justify-content-center" id="navigation">
                 <ul class="navbar-nav nav-underline">
-                    <li class="nav-item"><a href="#top" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#top" class="nav-link ">Home</a></li>
                     <li class="nav-item"><a href="cruxix.html" class="nav-link">Features</a></li>
-                    <li class="nav-item"><a href="tarif.html" class="nav-link">Pricing</a></li>
+                    <li class="nav-item"><a href="tarif.html" class="nav-link active">Pricing</a></li>
                     <li class="nav-item"><a href="apropos.html" class="nav-link">Team</a></li>
                 </ul>
             </div>
@@ -280,12 +51,12 @@
     </nav>
     <!-- section à remplir (CONTENU DE LA PAGE TARIFS AJOUTÉ ICI) -->
     <main class="main-content">
-        <div class="container-custom">
+            <div class="container-custom">
             <!-- Header Section (Texte sombre sur fond clair) -->
-            <div class="text-center mb-16 pt-10">
+             <div class="header-layout">
                 <h1 class="title-h1">Pricing</h1>
                 <p class="subtitle-p">
-                    Plans adapted to all needs, powered by innovation.
+                  
                 </p>
             </div>
 
@@ -294,60 +65,27 @@
                 
                 <!-- Card 1: Standard (45,000) -->
                 <div data-plan-title="Standard">
-                    <div class="pricing-card glass-card">
+                    <div class="simple-card">
                         <!-- Card Header -->
                         <div class="card-header">
                             <h3 class="card-title">Standard</h3>
                             <div class="price-display">
-                                <span class="price-main gradient-text">$45,000</span>
+                                <span class="price-main">$45,000</span>
                                 <span class="price-currency">CAD</span>
                             </div>
                         </div>
                         
-                        <!-- Card Content (Features) -->
-                        <div class="feature-list">
-                            <div class="feature-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span class="feature-text">Level 5 Autonomous Driving</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span class="feature-text">400 km Range</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span class="feature-text">Premium Interior</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span class="feature-text">Standard Audio System</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span class="feature-text">12-inch Touchscreen</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span class="feature-text">3 Year Warranty</span>
-                            </div>
+                        <!-- Card Content (Features: LOREM IPSUM PARAGRAPH) -->
+                        <div class="card-content-paragraph">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>
                         </div>
                         
-                        <!-- Card Footer (Button) -->
-                        <div style="margin-top: auto;">
-                            <button class="btn-custom btn-outline-custom">
-                                Add to Cart
+                        <!-- Card Footer (Button: SELECT) -->
+                        <div>
+                            <button class="btn-mockup btn-secondary-mockup">
+                                Select
                             </button>
                         </div>
                     </div>
@@ -355,66 +93,27 @@
 
                 <!-- Card 2: Plus (65,000) -->
                 <div data-plan-title="Plus">
-                    <div class="pricing-card glass-card">
+                    <div class="simple-card">
                         <!-- Card Header -->
                         <div class="card-header">
                             <h3 class="card-title">Plus</h3>
                             <div class="price-display">
-                                <span class="price-main gradient-text">$65,000</span>
+                                <span class="price-main">$65,000</span>
                                 <span class="price-currency">CAD</span>
                             </div>
                         </div>
                         
-                        <!-- Card Content (Features) -->
-                        <div class="feature-list">
-                            <div class="feature-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span class="feature-text">All Standard Features included</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span class="feature-text">600 km Range</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span class="feature-text">Genuine Leather Luxury Interior</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span class="feature-text">15-inch Touchscreen</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span class="feature-text">Electric Panoramic Roof</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span class="feature-text">Ventilated and Heated Seats</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span class="feature-text">5 Year Warranty</span>
-                            </div>
+                        <!-- Card Content (Features: LOREM IPSUM PARAGRAPH) -->
+                        <div class="card-content-paragraph">
+                            <p>
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus.
+                            </p>
                         </div>
                         
-                        <!-- Card Footer (Button) -->
-                        <div style="margin-top: auto;">
-                            <button class="btn-custom btn-outline-custom">
-                                Add to Cart
+                        <!-- Card Footer (Button: SELECT) -->
+                        <div>
+                            <button class="btn-mockup btn-secondary-mockup">
+                                Select
                             </button>
                         </div>
                     </div>
@@ -422,72 +121,27 @@
 
                 <!-- Card 3: Premium (85,000) - HIGHLIGHTED -->
                 <div data-plan-title="Premium">
-                    <div class="pricing-card glass-card glow-effect">
+                    <div class="simple-card highlight-card">
                         <!-- Card Header -->
                         <div class="card-header">
                             <h3 class="card-title">Premium</h3>
                             <div class="price-display">
-                                <span class="price-main gradient-text">$85,000</span>
+                                <span class="price-main">$85,000</span>
                                 <span class="price-currency">CAD</span>
                             </div>
                         </div>
                         
-                        <!-- Card Content (Features) -->
-                        <div class="feature-list">
-                            <div class="feature-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span class="feature-text">All Plus Features included</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span class="feature-text">Performance Sport Package</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span class="feature-text">650 km Range</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span class="feature-text">Bose High-Fidelity Audio System</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span class="feature-text">8-Way Massage Seats</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span class="feature-text">Personalized AI Assistant</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span class="feature-text">Air Purification System</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span class="feature-text">7 Year Warranty</span>
-                            </div>
+                        <!-- Card Content (Features: LOREM IPSUM PARAGRAPH) -->
+                        <div class="card-content-paragraph">
+                            <p>
+                                Voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+                            </p>
                         </div>
                         
-                        <!-- Card Footer (Button) -->
-                        <div style="margin-top: auto;">
-                            <button class="btn-custom btn-primary-custom">
-                                Add to Cart
+                        <!-- Card Footer (Button: SELECT) -->
+                        <div>
+                            <button class="btn-mockup btn-main">
+                                Select
                             </button>
                         </div>
                     </div>
@@ -495,72 +149,27 @@
 
                 <!-- Card 4: Pro (120,000) -->
                 <div data-plan-title="Pro">
-                    <div class="pricing-card glass-card">
+                    <div class="simple-card">
                         <!-- Card Header -->
                         <div class="card-header">
                             <h3 class="card-title">Pro</h3>
                             <div class="price-display">
-                                <span class="price-main gradient-text">$120,000</span>
+                                <span class="price-main">$120,000</span>
                                 <span class="price-currency">CAD</span>
                             </div>
                         </div>
                         
-                        <!-- Card Content (Features) -->
-                        <div class="feature-list">
-                            <div class="feature-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span class="feature-text">All Premium Features included</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span class="feature-text">700 km Range</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span class="feature-text">Nappa Leather Premium Interior</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span class="feature-text">Mark Levinson Audio System</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span class="feature-text">Integrated Refrigerator</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span class="feature-text">Individual Rear Screens</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span class="feature-text">Dedicated Concierge Service</span>
-                            </div>
-                            <div class="feature-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                                <span class="feature-text">10 Year Warranty</span>
-                            </div>
+                        <!-- Card Content (Features: LOREM IPSUM PARAGRAPH) -->
+                        <div class="card-content-paragraph">
+                            <p>
+                                Magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil.
+                            </p>
                         </div>
                         
-                        <!-- Card Footer (Button) -->
-                        <div style="margin-top: auto;">
-                            <button class="btn-custom btn-outline-custom">
-                                Add to Cart
+                        <!-- Card Footer (Button: SELECT) -->
+                        <div>
+                            <button class="btn-mockup btn-secondary-mockup">
+                                Select
                             </button>
                         </div>
                     </div>
@@ -568,33 +177,7 @@
 
             </div>
 
-            <!-- Financing Options (Utilise glass-card et son style sombre/survol) -->
-            <div class="mt-20 glass-card financing-options text-center">
-                <h2 class="title-h1" style="font-size: 1.5rem; margin-bottom: 32px; color: var(--light-text);">Financing Options</h2>
-                <div class="financing-grid">
-                    <div class="financing-item">
-                        <div class="text-4xl mb-4">💳</div>
-                        <h3 class="font-bold mb-2">Full Payment</h3>
-                        <p class="text-sm muted-foreground">
-                            5% reduction on the total vehicle price.
-                        </p>
-                    </div>
-                    <div class="financing-item">
-                        <div class="text-4xl mb-4">📊</div>
-                        <h3 class="font-bold mb-2">Car Loan</h3>
-                        <p class="text-sm muted-foreground">
-                            Competitive rate starting at 1.9% over 72 months.
-                        </p>
-                    </div>
-                    <div class="financing-item">
-                        <div class="text-4xl mb-4">🔄</div>
-                        <h3 class="font-bold mb-2">Long-term Lease</h3>
-                        <p class="text-sm muted-foreground">
-                            Flexible leasing formulas available for professionals.
-                        </p>
-                    </div>
-                </div>
-            </div>
+          
         </div>
     </main>
     <!-- footer à complèter en groupe -->
