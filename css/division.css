@@ -1,0 +1,56 @@
+.rs {
+    display: block;
+}
+
+.suivi {
+    display: block;
+    text-align: center;
+}
+
+.icon-rs {
+    text-align: center;
+}
+
+.im-footer {
+    text-align: center;
+    margin-top: 15px;
+
+}
+
+.fb,
+.ig,
+.x,
+.tiktok {
+    display: inline-block;
+    width: 80px;
+    margin-right: 15px;
+}
+
+.confort-card {
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
+}
+
+.confort-infos {
+    display: inline-block;
+}
+
+.avant-rs {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.confort-row {
+    margin-bottom: 12px;
+}
+
+.im-footer {
+    margin-top: 20px;
+}
+.lien-inactif {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
