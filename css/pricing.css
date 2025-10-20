@@ -5,17 +5,9 @@
             --text-dark: #212529;
             --border-color: #e9ecef; 
         }
-
-        body.bg-light { 
-           background: #f2f2f2 !important; 
-            color: var(--text-dark); 
-            line-height: 1.6;
-            min-height: 100vh;
-        }
         
        
         .navigateur {
-            background: #f2f2f2 !important;
             border-bottom: 1px solid var(--border-color);
         }
       
