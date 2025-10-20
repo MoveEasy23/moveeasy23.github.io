@@ -2,13 +2,12 @@
             --primary-color: #6c757d; /* Gris pour les actions/bordures */
             --success-color: #888888; /* Gris pour les coches */
             --card-bg: #ffffff; /* Fond de carte blanc */
-            --text-dark: #212529;
-            --border-color: #e9ecef; 
+            --text-dark: #212529; 
         }
         
        
         .navigateur {
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid;
         }
       
        
