@@ -41,7 +41,7 @@ body {
 }
 
 .hero {
-  width: 100vw;                /* occupe toute la largeur */
+  width: 100%;                /* occupe toute la largeur */
   min-height: 90vh;            /* prend presque tout l’écran */
   display: flex;
   align-items: center;
@@ -55,6 +55,11 @@ body {
 .text h1 {
   font-size: 2.8rem;
   line-height: 1.2;
+
+  background: linear-gradient(90deg, #856ac4, #7209b7, #f72585);
+  -webkit-background-clip: text; 
+  background-clip: text;         
+  color: transparent;            
 }
 
 .text h1 span {
