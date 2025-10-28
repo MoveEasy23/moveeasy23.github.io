@@ -17,6 +17,20 @@ body {
   margin: 0;
 }
 
+
+.navigateur .nav-link,
+.navigateur .navbar-brand {
+  color: #fff !important;
+}
+
+.navigateur .nav-link:hover {
+  color: #c084fc !important;
+}
+
+.navigateur .nav-link.active {
+  color: #f72585 !important;
+}
+
 .hero {
   width: 100vw;                /* occupe toute la largeur */
   min-height: 90vh;            /* prend presque tout l’écran */
