@@ -18,17 +18,26 @@ body {
 }
 
 
+.navigateur {
+  background: rgba(16, 16, 23, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background 0.3s ease;
+}
+
+
 .navigateur .nav-link,
 .navigateur .navbar-brand {
-  color: #fff !important;
+  color: #fff !important; /* Force le blanc */
 }
 
 .navigateur .nav-link:hover {
-  color: #c084fc !important;
+  color: #c084fc !important; /* violet clair au survol */
 }
 
 .navigateur .nav-link.active {
-  color: #f72585 !important;
+  color: #f72585 !important; /* rose d’accent pour l’onglet actif */
 }
 
 .hero {
