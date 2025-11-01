@@ -1,115 +1,314 @@
- :root { 
-            --primary-color: #6c757d; /* Gris pour les actions/bordures */
-            --success-color: #888888; /* Gris pour les coches */
-            --card-bg: #ffffff; /* Fond de carte blanc */
-            --text-dark: #212529; 
+     /* =======================================
+           1. Couleurs et Variables CSS
+           ======================================= */
+        :root {
+            --color-background: #101017;
+            --color-foreground: #f5f5f5;
+            --color-primary: #5d67e8; /* Bleu/Violet principal */
+            --color-accent: #d127a5; /* Magenta pour les dégradés */
+            --color-muted-foreground: #a0a0a0;
+            --color-card-bg: rgba(255, 255, 255, 0.05); /* Base pour l'effet "verre" */
+            --color-special-tag: #9370DB; /* Violet clair pour l'étiquette (maintenant le ruban) */
+            --color-ribbon: var(--color-special-tag); /* Utiliser le violet clair pour le ruban */
         }
-        
-       
-       
-        /* Layout and Structure (for Pricing Content) */
-        .main-content {
-            padding-top: 80px; 
-            padding-bottom: 80px; 
+
+        /* =======================================
+           2. BODY & Fond Dégradé
+           ======================================= */
+        body {
+            background-color: var(--color-background);
+            background-image: 
+                linear-gradient(135deg, #370a62 0%, transparent 50%),
+                linear-gradient(315deg, #0a0a58 0%, transparent 50%);
+            background-blend-mode: screen;
+            color: var(--color-foreground);
+            overflow-x: hidden;
             min-height: 100vh;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            padding-top: 0; 
+            display: flex;
+            flex-direction: column;
         }
         
-
-        /* Header Section */
-       .header-layout {
-            text-align: center; /* Centre le texte */
-            margin-bottom: 64px; /* Marge en bas  */
-            padding-top: 40px;   /* Rembourrage en haut */
+        /* Assure que le contenu principal prend l'espace restant pour pousser le footer vers le bas */
+        .main-content {
+            flex-grow: 1; 
         }
 
-        .title-h1 {
-            font-size: 2.5rem; 
-            font-weight: bold; 
-            margin-bottom: 1rem; 
-            letter-spacing: -0.025em; 
-            color: var(--text-dark);
+        /* Classes utilitaires de base (similaires à Tailwind) */
+        .container-style {
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 24px;
+            padding-right: 24px;
         }
 
-      
-        /*  Pricing Grid (4-column layout for larger screens) */
+        /* =======================================
+           3. En-tête et Bouton Panier
+           ======================================= */
+        .main-header {
+            padding-top: 40px; 
+            padding-bottom: 40px;
+        }
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-text {
+            font-size: 1.5rem; 
+            font-weight: 700; 
+            text-decoration: none; 
+            color: var(--color-foreground);
+        }
+
+        /* Icône Panier */
+        .cart-button {
+            position: relative;
+            padding: 8px;
+            border-radius: 9999px;
+            transition: background-color 0.3s;
+            background: none;
+            border: none;
+            cursor: pointer;
+            line-height: 1;
+        }
+        .cart-button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .cart-count {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px 8px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: white;
+            transform: translate(50%, -50%);
+            background-color: var(--color-primary);
+            border-radius: 9999px;
+        }
+
+        /* =======================================
+           4. Contenu Principal
+           ======================================= */
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+        .main-title {
+            font-size: 3rem; 
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        @media (min-width: 768px) {
+            .main-title {
+                font-size: 3.75rem;
+            }
+        }
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--color-muted-foreground);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+        }
+
+        /* =======================================
+           5. Grille de Prix et Carte
+           ======================================= */
         .pricing-grid {
             display: grid;
-            gap: 20px; 
-            max-width: 1000px; 
-            margin: 0 auto;
-            grid-template-columns: 1fr; 
+            grid-template-columns: 1fr; /* Mobile: 1 colonne */
+            gap: 48px; 
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 48px; 
         }
-        
+        /* Tablette: 2 colonnes */
         @media (min-width: 768px) {
             .pricing-grid {
-                grid-template-columns: repeat(2, 1fr); 
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 1000px; /* Ajustement pour 2 cartes */
             }
         }
+        /* Bureau: 4 colonnes (pour les 4 cartes) */
         @media (min-width: 1024px) {
             .pricing-grid {
-                grid-template-columns: repeat(4, 1fr); 
+                grid-template-columns: repeat(4, 1fr);
+                max-width: 1280px; /* Permet aux 4 cartes de s'étaler */
             }
         }
 
-        /*  Cartes (Mockup Look)  */
-        .simple-card {
-            background: var(--card-bg); 
-            /* Utilisation de la couleur primaire pour rendre les bordures grises et visibles */
-            border: 1px solid var(--primary-color);
-            border-radius: 0; /* Plus carré */
-            padding: 20px; 
+        /* Style de base de la carte (glass-card) */
+        .pricing-card {
+            background-color: var(--color-card-bg);
+            backdrop-filter: blur(8px);
+            padding: 16px; 
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease-in-out; /* Transition pour le hover */
             display: flex;
             flex-direction: column;
             height: 100%;
-            transition: all 0.2s;
-        }
-      
-
-        /* Contenu de la Carte */
-        .card-header { margin-bottom: 15px; }
-        .card-title { font-size: 1.5rem; font-weight: 700; color: var(--text-dark); }
-        .price-display { margin-top: 10px; }
-        .price-main { 
-            font-size: 2.5rem; 
-            font-weight: 800; 
-            color: var(--primary-color); /* Prix en gris */
-        }
-        .price-currency { 
-            font-size: 0.9rem; 
-            color: var(--primary-color); 
-            margin-left: 5px; 
-        }
-        
-        /* STYLE POUR LE PARAGRAPHE DE LOREM IPSUM */
-        .card-content-paragraph {
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px solid var(--primary-color); /* Séparateur gris */
-            margin-bottom: 20px; 
-            flex-grow: 1; /* Permet au bouton de rester en bas */
-            font-size: 0.9rem;
-            line-height: 1.5;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeIn 0.5s ease-out forwards;
+            position: relative; 
+            overflow: hidden; /* Important pour que le ruban ne déborde pas */
         }
 
-        .card-content-paragraph p {
-            margin: 0;
-            text-align: justify;
+        /* Effet au survol de toutes les cartes */
+        .pricing-card:hover {
+            border-color: var(--color-primary) !important; /* Contour bleu/violet */
+            transform: translateY(-5px) scale(1.03); /* S'approche de l'écran */
+            box-shadow: 0 0 50px rgba(93, 103, 232, 0.6); /* Ombre lumineuse */
         }
         
-        /*  Boutons gris */
-        .btn-mockup { 
-            width: 100%;
-            padding: 10px 15px; 
-            font-weight: 600; 
-            border-radius: 0; /* Carré */
-            
-            margin-top: auto;
+        /* Ruban d'angle "Spéciale" */
+        .corner-ribbon {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px; /* Taille du ruban */
+            height: 100px;
+            overflow: hidden;
+            pointer-events: none; /* Ne pas bloquer les clics */
+            z-index: 10;
         }
-        .btn-main {
-            background-color: var(--primary-color);
+
+        .corner-ribbon::before {
+            content: "SPÉCIALE"; /* Texte du ruban */
+            position: absolute;
+            top: 20px; 
+            right: -25px; 
+            padding: 5px 25px;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+            font-size: 0.75rem;
+            font-weight: 700;
+            line-height: 1;
+            text-align: center;
             color: white;
-            border: 1px solid var(--primary-color);
+            background-color: var(--color-ribbon); /* Violet clair */
+            transform: rotate(45deg); /* Rotation pour l'angle */
+            transform-origin: 50% 50%;
+            /* Dégradé léger comme dans l'image de référence */
+            background-image: linear-gradient(rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.1) 100%);
+        }
+
+        /* Contenu de la carte */
+        .pricing-card-header {
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .pricing-card-title { font-size: 1.5rem; font-weight: 700; }
+        .pricing-card-price { margin-top: 0.75rem; font-size: 2.25rem; font-weight: 700; } 
+        .pricing-card-currency { color: var(--color-muted-foreground); margin-left: 0.5rem; }
+
+        .pricing-card-features {
+            padding-top: 12px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 8px; 
+        }
+        .feature-item { display: flex; align-items: flex-start; gap: 12px; }
+        .feature-text { color: rgba(245, 245, 245, 0.8); font-size: 0.875rem; }
+        .check-icon {
+            color: var(--color-primary);
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .pricing-card-footer {
+            padding-top: 12px;
+            margin-top: 12px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
         
+        /* Boutons */
+        .btn {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+            cursor: pointer;
+            text-align: center;
+            border: 1px solid transparent;
+            text-decoration: none;
+        }
+        .btn-default {
+            background-color: var(--color-primary);
+            color: white;
+        }
+        .btn-default:hover {
+            background-color: rgba(93, 103, 232, 0.9);
+        }
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--color-primary);
+            color: var(--color-primary);
+        }
+        .btn-outline:hover {
+            background-color: rgba(93, 103, 232, 0.1);
+        }
 
-      
+        /* =======================================
+           6. TOAST (Notification) et Animations
+           ======================================= */
+        #toast-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        @keyframes toastIn {
+            0% { transform: translateX(100%); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+        .toast-message {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            animation: toastIn 0.3s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* =======================================
+           7. Pied de page (Footer)
+           ======================================= */
+        .main-footer {
+            padding: 24px 0;
+            text-align: center;
+            font-size: 0.875rem;
+            color: var(--color-muted-foreground);
+            background-color: var(--color-card-bg); 
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            width: 100%;
+            margin-top: auto; 
+        }
+        .main-footer p {
+            margin: 0;
+        }
