@@ -2,23 +2,9 @@
             --primary-color: #6c757d; /* Gris pour les actions/bordures */
             --success-color: #888888; /* Gris pour les coches */
             --card-bg: #ffffff; /* Fond de carte blanc */
-            --text-dark: #212529;
-            --border-color: #e9ecef; 
-        }
-
-        body.bg-light { 
-           background: #f2f2f2 !important; 
-            color: var(--text-dark); 
-            line-height: 1.6;
-            min-height: 100vh;
+            --text-dark: #212529; 
         }
         
-       
-        .navigateur {
-            background: #f2f2f2 !important;
-            border-bottom: 1px solid var(--border-color);
-        }
-      
        
        
         /* Layout and Structure (for Pricing Content) */
