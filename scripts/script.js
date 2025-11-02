@@ -154,7 +154,7 @@
                         </div>
                         <div class="pricing-card-footer">
                             <button 
-                                onclick="handleAddToCart('${plan}')"
+                                onclick="handleAddToCart('${plan.title}, ${plan.price}, ${plan.id}')"
                                 class="${buttonClasses}"
                             >
                                 Ajouter au panier
