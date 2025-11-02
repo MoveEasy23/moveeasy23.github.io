@@ -1,4 +1,3 @@
-.facebook,
 .instagram,
 .twitter,
 .tik {
@@ -16,4 +15,9 @@
     height: 200px;
     object-fit: cover;
     display: block;
+}
+
+.facebook {
+    width: 60px;
+    border-radius: 50px;
 }
