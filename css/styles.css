@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
 :root{
   --color-foreground: #f5f5f5;
   --color-primary: #5d67e8;
