@@ -2,31 +2,11 @@
             --primary-color: #6c757d; /* Gris pour les actions/bordures */
             --success-color: #888888; /* Gris pour les coches */
             --card-bg: #ffffff; /* Fond de carte blanc */
-            --text-dark: #212529;
-            --border-color: #e9ecef; 
-        }
-
-        body.bg-light { 
-            background-color: #ffffff !important; 
-            color: var(--text-dark); 
-            line-height: 1.6;
-            min-height: 100vh;
+            --text-dark: #212529; 
         }
         
        
-        .navigateur {
-            background-color: #ffffff !important;
-            border-bottom: 1px solid var(--border-color);
-        }
-        .navbar-brand, .nav-link {
-            color: var(--text-dark) !important;
-        }
        
-        .nav-link.active {
-             font-weight: bold; /* Garde une indication de l'actif */
-             color: var(--text-dark) !important; 
-        }
-        
         /* Layout and Structure (for Pricing Content) */
         .main-content {
             padding-top: 80px; 
@@ -34,12 +14,6 @@
             min-height: 100vh;
         }
         
-        .container-custom {
-            max-width: 1280px; 
-            margin-left: auto;
-            margin-right: auto;
-            padding: 0 15px;
-        }
 
         /* Header Section */
        .header-layout {
@@ -56,14 +30,7 @@
             color: var(--text-dark);
         }
 
-        .subtitle-p {
-            font-size: 1.125rem; 
-            line-height: 1.75rem; 
-            color: var(--primary-color); 
-            max-width: 640px; 
-            margin: 0 auto;
-        }
-        
+      
         /*  Pricing Grid (4-column layout for larger screens) */
         .pricing-grid {
             display: grid;
@@ -96,10 +63,7 @@
             height: 100%;
             transition: all 0.2s;
         }
-        /* Mise en évidence de la carte Premium (2px) 
-        .highlight-card {
-            border: 2px solid var(--primary-color) !important;
-        }*/
+      
 
         /* Contenu de la Carte */
         .card-header { margin-bottom: 15px; }
@@ -138,8 +102,7 @@
             padding: 10px 15px; 
             font-weight: 600; 
             border-radius: 0; /* Carré */
-            transition: all 0.2s;
-            cursor: pointer;
+            
             margin-top: auto;
         }
         .btn-main {
@@ -147,13 +110,6 @@
             color: white;
             border: 1px solid var(--primary-color);
         }
-        /*.btn-main:hover { background-color: #5a6268; }  Gris plus foncé au survol */
+        
 
-        .btn-secondary-mockup {
-            background-color: transparent;
-            border: 1px solid var(--primary-color);
-            color: var(--primary-color);
-        }
-        /*.btn-secondary-mockup:hover {
-            background-color: rgba(108, 117, 125, 0.1);
-        }*/
+      
