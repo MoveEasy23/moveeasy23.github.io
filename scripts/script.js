@@ -13,7 +13,8 @@
                     "Assistance routière 24/7",
                     "Garantie 3 ans"
                 ],
-                isSpecial: false
+                isSpecial: false,
+                id: 1
             },
             {
                 title: "Plus", 
@@ -28,7 +29,8 @@
                     "Sièges ventilés et chauffants",
                     "Garantie 5 ans"
                 ],
-                isSpecial: false 
+                isSpecial: false,
+                id: 2
             },
             {
                 title: "Pro",
@@ -44,7 +46,8 @@
                     "Éclairage ambiance LED",
                     "Garantie 7 ans"
                 ],
-                isSpecial: false
+                isSpecial: false,
+                id: 3
             },
             {
                 title: "Luxury", // Nouvelle carte Luxury
@@ -60,7 +63,8 @@
                     "Service conciergerie dédié",
                     "Garantie 10 ans"
                 ],
-                isSpecial: true // Marque cette carte comme "spéciale"
+                isSpecial: true, // Marque cette carte comme "spéciale"
+                id: 4
             }
         ];
 
@@ -150,7 +154,7 @@
                         </div>
                         <div class="pricing-card-footer">
                             <button 
-                                onclick="handleAddToCart('${plan.title}')"
+                                onclick="handleAddToCart('${plan}')"
                                 class="${buttonClasses}"
                             >
                                 Ajouter au panier
