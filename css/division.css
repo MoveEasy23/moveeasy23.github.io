@@ -62,3 +62,16 @@
 .bas{
     margin-top: 350px;
 }
+
+.bas {
+  opacity: 0;
+  transform: translateY(300px);
+  transition: opacity 2s ease, transform 2s ease;
+  will-change: opacity, transform;
+}
+
+.bas.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
