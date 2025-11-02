@@ -1,0 +1,63 @@
+.brand-name {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 6rem;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #00c3ff, #7d2ae8, #ff0099);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 4s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 15px #7d2ae8; }
+      to { text-shadow: 0 0 40px #00c3ff; }
+    }
+
+    .slogan {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.8rem;
+        color: #e0e0ff;
+        letter-spacing: 2px;
+        display: inline-block;
+    }
+
+    .slogan span {
+        opacity: 0.2;
+        animation: glowCascade 2s infinite;
+    }
+
+    @keyframes glowCascade {
+        0%,
+        100% {
+            opacity: 0.2;
+            text-shadow: none;
+        }
+
+        50% {
+            opacity: 1;
+            text-shadow: 0 0 8px #7d2ae8, 0 0 15px #00c3ff;
+        }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .brand-name {
+        font-size: 3rem;
+        letter-spacing: 4px;
+      }
+
+      .slogan {
+        font-size: 1.2rem;
+      }
+    }
+
+
+.disabled-link {
+  color: #aaa;
+  cursor: default;
+  text-decoration: none;
+}
+.disabled-link:hover {
+  color: #c084fc;
+}
