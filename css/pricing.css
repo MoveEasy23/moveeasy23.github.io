@@ -122,7 +122,11 @@
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
+<<<<<<< HEAD
             text-emphasis-color: transparent;
+=======
+            -webkit-text-fill-color: transparent;
+>>>>>>> pricing
         }
 
         /* =======================================
