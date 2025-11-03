@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 :root {
@@ -31,6 +31,9 @@ body {
   transition: background 0.3s ease;
 }
 
+.bouton{
+  background-color: #5d67e8;
+}
 
 .navigateur .nav-link,
 .navigateur .navbar-brand {

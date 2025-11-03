@@ -24,7 +24,7 @@
 
 </head>
 
-<body>
+<body onload="compteur()">
     <!-- barre de navigation -->
     <nav class="navbar navbar-expand-lg navigateur sticky-top">
         <div class="container-fluid">
@@ -54,99 +54,118 @@
     <!-- section à remplir -->
     <main>
         <main class="container my-5">
-    <section id="team" class="text-center">
-        <h1 class="mb-4">À propos de notre équipe</h1>
-        <p class="lead" style="max-width: 800px; margin: 0 auto;">
-            <!-- paragraphe ici -->
-            Nous sommes une équipe passionnée composée de cinq membres : Anthoni, Abdou, Naomi, Adrien et Steven. 
-            Ensemble, nous avons imaginé **Cruxix**, une voiture futuriste capable de conduire de façon totalement autonome, 
-            combinant design innovant, intelligence artificielle et respect de l'environnement.
-        </p>
-        <!-- Image de la voiture -->
-        <img src="img/icone2.jpg" alt="Voiture futuriste Cruxix" class="img-fluid rounded mt-4 shadow">
+            <section id="team" class="text-center">
+                <h1 class="mb-4">À propos de notre équipe</h1>
+                <p class="lead" style="max-width: 800px; margin: 0 auto;">
+                    <!-- paragraphe ici -->
+                    Nous sommes une équipe passionnée composée de cinq membres : Anthoni, Abdou, Naomi, Adrien et
+                    Steven.
+                    Ensemble, nous avons imaginé **Cruxix**, une voiture futuriste capable de conduire de façon
+                    totalement autonome,
+                    combinant design innovant, intelligence artificielle et respect de l'environnement.
+                </p>
+                <!-- Image de la voiture -->
+                <img src="img/icone2.jpg" alt="Voiture futuriste Cruxix" class="img-fluid rounded mt-4 shadow">
 
-       <!-- Section des cartes d'équipe -->
-        <div class="row mt-5 justify-content-center">
-            <!-- Carte 1 -->
-            <div class="col-6 col-md-4 col-lg-2 mb-4">
-                <div class="card shadow-sm h-100" 
-     style="width: 150px; height: 250px; margin: 0 auto; background-color: black; color: white;">
-    <img src="img/icone1.png" class="card-img-top" alt="Anthoni" style="height: 180px; object-fit: cover;">
-    <div class="card-body p-2">
-        <h5 class="card-title mb-0">Anthoni Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam dolorem nesciunt consectetur exercitationem sit et!</h5>
+                <!-- Section des cartes d'équipe -->
+                <div class="row mt-5 justify-content-center">
+                    <!-- Carte 1 -->
+                    <div class="col-6 col-md-4 col-lg-2 mb-4">
+                        <div class="card shadow-sm h-100"
+                            style="width: 150px; height: 250px; margin: 0 auto; background-color: black; color: white;">
+                            <img src="img/icone1.png" class="card-img-top" alt="Anthoni"
+                                style="height: 180px; object-fit: cover;">
+                            <div class="card-body p-2">
+                                <h5 class="card-title mb-0">Anthoni Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Aliquam dolorem nesciunt consectetur exercitationem sit et!</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carte 2 -->
+                    <div class="col-6 col-md-4 col-lg-2 mb-4">
+                        <div class="card shadow-sm h-100" style="width: 150px; height: 250px; margin: 0 auto;">
+                            <img src="img/icone1.png" class="card-img-top" alt="Abdou"
+                                style="height: 180px; object-fit: cover;">
+                            <div class="card-body p-2">
+                                <h5 class="card-title mb-0">Abdou Lorem ipsum dolor sit amet, consectetur adipisicing
+                                    elit. Vel dolores deleniti id iure totam nobis?</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carte 3 -->
+                    <div class="col-6 col-md-4 col-lg-2 mb-4">
+                        <div class="card shadow-sm h-100" style="width: 150px; height: 250px; margin: 0 auto;">
+                            <img src="img/icone1.png" class="card-img-top" alt="Naomi"
+                                style="height: 180px; object-fit: cover;">
+                            <div class="card-body p-2">
+                                <h5 class="card-title mb-0">Naomi Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Quis quo tempore, neque beatae dignissimos blanditiis!</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carte 4 -->
+                    <div class="col-6 col-md-4 col-lg-2 mb-4">
+                        <div class="card shadow-sm h-100" style="width: 150px; height: 250px; margin: 0 auto;">
+                            <img src="img/icone1.png" class="card-img-top" alt="Adrien"
+                                style="height: 180px; object-fit: cover;">
+                            <div class="card-body p-2">
+                                <h5 class="card-title mb-0">Adrien Lorem, ipsum dolor sit amet consectetur adipisicing
+                                    elit. Voluptatem soluta nobis earum ea recusandae et.</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carte 5 -->
+                    <div class="col-6 col-md-4 col-lg-2 mb-4">
+                        <div class="card shadow-sm h-100" style="width: 150px; height: 250px; margin: 0 auto;">
+                            <img src="img/icone1.png" class="card-img-top" alt="Steven"
+                                style="height: 180px; object-fit: cover;">
+                            <div class="card-body p-2">
+                                <h5 class="card-title mb-0">Steven Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Molestiae amet aliquam quibusdam a natus eum!</h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Carte 2 -->
-            <div class="col-6 col-md-4 col-lg-2 mb-4">
-                <div class="card shadow-sm h-100" style="width: 150px; height: 250px; margin: 0 auto;">
-                    <img src="img/icone1.png" class="card-img-top" alt="Abdou" style="height: 180px; object-fit: cover;">
-                    <div class="card-body p-2">
-                        <h5 class="card-title mb-0">Abdou Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel dolores deleniti id iure totam nobis?</h5>
-                    </div>
-                </div>
-            </div>
+                <section class="text-center my-5">
+                    <h2 class="mb-3">Notre mission</h2>
+                    <p class="text-muted" style="max-width: 800px; margin: 0 auto;">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit sapiente accusamus amet quas
+                        dolor temporibus harum quia dolorum labore, a possimus voluptatum quisquam alias aperiam aut
+                        illum error beatae dolorem corrupti laborum quaerat tempora dolores ducimus rem! Ab, nisi
+                        numquam.
+                    </p>
 
-            <!-- Carte 3 -->
-            <div class="col-6 col-md-4 col-lg-2 mb-4">
-                <div class="card shadow-sm h-100" style="width: 150px; height: 250px; margin: 0 auto;">
-                    <img src="img/icone1.png" class="card-img-top" alt="Naomi" style="height: 180px; object-fit: cover;">
-                    <div class="card-body p-2">
-                        <h5 class="card-title mb-0">Naomi Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quo tempore, neque beatae dignissimos blanditiis!</h5>
-                    </div>
-                </div>
-            </div>
+                    <section class="text-center my-5">
+                        <h2 class="mb-3">Notre histoire</h2>
+                        <p style="max-width: 800px; margin: 0 auto;">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo alias eligendi ratione
+                            mollitia voluptatibus eius quia ipsum nulla placeat, sint similique rerum deleniti commodi
+                            optio, officiis necessitatibus nesciunt sapiente architecto sed ex facere quis molestias
+                            assumenda. Ipsum molestias quia, dicta, esse quas quae ab iusto totam quo illo tempora
+                            soluta!
+                        </p>
 
-            <!-- Carte 4 -->
-            <div class="col-6 col-md-4 col-lg-2 mb-4">
-                <div class="card shadow-sm h-100" style="width: 150px; height: 250px; margin: 0 auto;">
-                    <img src="img/icone1.png" class="card-img-top" alt="Adrien" style="height: 180px; object-fit: cover;">
-                    <div class="card-body p-2">
-                        <h5 class="card-title mb-0">Adrien Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta nobis earum ea recusandae et.</h5>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Carte 5 -->
-            <div class="col-6 col-md-4 col-lg-2 mb-4">
-                <div class="card shadow-sm h-100" style="width: 150px; height: 250px; margin: 0 auto;">
-                    <img src="img/icone1.png" class="card-img-top" alt="Steven" style="height: 180px; object-fit: cover;">
-                    <div class="card-body p-2">
-                        <h5 class="card-title mb-0">Steven Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae amet aliquam quibusdam a natus eum!</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <section class="text-center my-5">
-    <h2 class="mb-3">Notre mission</h2>
-    <p class="text-muted" style="max-width: 800px; margin: 0 auto;">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit sapiente accusamus amet quas dolor temporibus harum quia dolorum labore, a possimus voluptatum quisquam alias aperiam aut illum error beatae dolorem corrupti laborum quaerat tempora dolores ducimus rem! Ab, nisi numquam.
-    </p>
-
-    <section class="text-center my-5">
-    <h2 class="mb-3">Notre histoire</h2>
-    <p style="max-width: 800px; margin: 0 auto;">
-       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo alias eligendi ratione mollitia voluptatibus eius quia ipsum nulla placeat, sint similique rerum deleniti commodi optio, officiis necessitatibus nesciunt sapiente architecto sed ex facere quis molestias assumenda. Ipsum molestias quia, dicta, esse quas quae ab iusto totam quo illo tempora soluta!
-    </p>
-
-    <section class="text-center my-5">
-    <h2 class="mb-3">Nous contacter</h2>
-    <p>Pour toute question ou suggestion, vous pouvez nous écrire à :  
-        <a href="mailto:contact@cruxix.com">contact@cruxix.com</a>
-    </p>
-    </section>
-    </section>
-</main>
-    </main> 
+                        <section class="text-center my-5">
+                            <h2 class="mb-3">Nous contacter</h2>
+                            <p>Pour toute question ou suggestion, vous pouvez nous écrire à :
+                                <a href="mailto:contact@cruxix.com">contact@cruxix.com</a>
+                            </p>
+                        </section>
+                    </section>
+        </main>
+    </main>
     <!-- footer à complèter en groupe lorem50 -->
-    
-        <footer class="text-center">
-            <p>Coryright 2025@Cruxix</p>
-        </footer>
 
-    
+    <footer class="text-center">
+        <p>Coryright 2025@Cruxix</p>
+    </footer>
+
+
     <!--Script Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
