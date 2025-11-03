@@ -1,0 +1,56 @@
+1. Thème et Palette de Couleurs
+
+Palette de Couleurs Détaillée
+
+Rôle	     				Description
+Fond Principal					Noir très foncé, base du thème de l'application.
+Texte						Blanc cassé pour le texte principal et les menus.
+Primaire/Action					Bleu/Violet vif. Utilisé pour les boutons d'appel à l'action, les liens actifs, et les icônes de succès.
+Accentuation					Magenta/Rose. Utilisé pour les dégradés.
+Texte Mute					Gris clair pour les sous-titres, les descriptions et les détails.
+Cartes 						Fond translucide.
+Ruban "Spécial" 				Violet clair.
+Panier 						Violet clair.
+
+
+Dégradé 
+Le dégradé de texte utilisé sur les titres principaux (H1) Primaire et la couleur d'Accentuation :
+
+
+
+2. Typographie
+
+Police choisie pour tout le site : Inter (sans-serif). 
+
+Élément					Spécificités
+Famille Globale				Police par défaut pour tout le <body>.
+Titre Principal H1			Utilise obligatoirement la classe .gradient-text pour l'effet de dégradé.
+Titre de Section H2			Standard pour les titres de sections (ex: "Our Team", "Financing Options").
+Sous-titre P				Couleur : --color-muted-foreground.
+Titre de Carte H3			Titre des plans tarifaires ou des membres de l'équipe.
+Prix					Doit utiliser la couleur --color-primary ou le dégradé.
+
+
+
+3. Principes de Design et Composants
+3.1 Cartes et Conteneurs
+--> Fond: --color-card-bg (rgba(255, 255, 255, 0.05)).
+--> Filtre: backdrop-filter: blur(8px).
+--> Interaction (Hover): "Glow" doux (box-shadow) utilisant --color-primary et de (transform: translateY(-5px)).
+
+
+
+
+
+
+
+3.2 Boutons d'Action
+
+Type de Bouton				Style		Couleurs (Fond/Texte)
+Primaire (.btn-default)			Rempli		--color-primary, Texte: --color-foreground (Blanc)
+Secondaire (.btn-outline)		Contour		Transparent, Contour: --color-primary, Texte: --color-primary
+Bouton d'Alerte/Supprimer		Rempli		(Rouge), Texte: Blanc
+
+
+
+
