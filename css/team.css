@@ -1,0 +1,135 @@
+body {
+      font-family: 'Cormorant Infant', serif;
+      color: #fff;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+
+
+    /* Section équipe */
+    #team h1 {
+      color: #ba68c8;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .team-circle {
+      position: relative;
+      width: 800px;
+      height: 800px;
+      margin: 50px auto;
+      border-radius: 50%;
+    }
+
+    /* Voiture au centre */
+    .car-center {
+      position: absolute;
+      top: 42%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 500px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(186, 104, 200, 0.5);
+      z-index: 1;
+    }
+
+    .bubble-card {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      text-align: center;
+      transform: translate(-50%, -50%);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    /* Hover: agrandissement sans shadow */
+    .bubble-card:hover {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    .bubble-img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #ba68c8;
+      margin-bottom: 0.5rem;
+      transition: transform 0.4s ease;
+    }
+
+    .bubble-card:hover .bubble-img {
+      transform: scale(1.1);
+    }
+
+    /* Texte des bulles masqué par défaut */
+    .bubble-name,
+    .bubble-desc {
+      color: #fff;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    /* Affiche le texte au survol de la bulle */
+    .bubble-card:hover .bubble-name,
+    .bubble-card:hover .bubble-desc {
+      opacity: 1;
+    }
+
+    /* Placement symétrique des bulles en cercle */
+    .bubble1 {
+      top: 5%;
+      left: 50%;
+    }
+
+    .bubble2 {
+      top: 20%;
+      left: 88%;
+    }
+
+    .bubble3 {
+      top: 78%;
+      left: 82%;
+    }
+
+    .bubble4 {
+      top: 78%;
+      left: 18%;
+    }
+
+    .bubble5 {
+      top: 20%;
+      left: 12%;
+    }
+
+    /* Section texte */
+    section {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    h2 {
+      color: #ba68c8;
+      margin-bottom: 20px;
+    }
+
+
+    a {
+      color: #ba68c8;
+      text-decoration: none;
+    }
+
+    /* Animation d’apparition */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
