@@ -48,8 +48,6 @@ function creerPanier(identifiant) {
 }
 
 
-
-
 function supprimerElement(identifiant) {
     sessionStorage.removeItem("name" + identifiant);
     sessionStorage.removeItem("price" + identifiant);
