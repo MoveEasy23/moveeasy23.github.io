@@ -51,18 +51,6 @@ body {
   /* rose d’accent pour l’onglet actif */
 }
 
-/* .navigateur {
-  background: linear-gradient(90deg, #0a0a58, #370a62);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-} */
-
-/* .navigateur {
-  background: linear-gradient(90deg, #7209b7, #f72585);
-}
-.navigateur .nav-link {
-  color: #fff;
-} */
-
 .navigateur {
   background: rgba(16, 16, 23, 0.2);
   backdrop-filter: blur(20px);
