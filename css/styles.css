@@ -236,3 +236,25 @@ body {
   background-color: var(--color-primary);
   border-radius: 9999px;
 }
+
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.3);
+  background-color: #4d0462;
+}
+
+/* --- Animation du menu mobile --- */
+.navbar-toggler {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding: 6px 10px;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  width: 1.8em;
+  height: 1.8em;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
