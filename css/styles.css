@@ -258,3 +258,25 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
 }
+
+
+@media (max-width: 768px) {
+  .hero {
+      align-items: flex-start;
+      min-height: auto;
+  }
+
+  .hero .card-img {
+      height: 55vh;
+      object-fit: cover;
+      object-position: center 15%;
+  }
+
+  .card-img-overlay.text {
+      top: 10px;
+      padding-top: 0;
+  }
+}
+
+
+
