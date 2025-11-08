@@ -268,10 +268,10 @@ body {
   }
 
   .hero .card-img {
-    height: 55vh;          /* hauteur propre */
+    height: 55vh;         
     width: 100%;
-    object-fit: cover;     /* crop automatique */
-    object-position: center 10%;   /* tu peux ajuster */
+    object-fit: cover;   
+    object-position: center 10%;
     display: block;
   }
 
