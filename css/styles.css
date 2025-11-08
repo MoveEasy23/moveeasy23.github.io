@@ -261,22 +261,26 @@ body {
 
 
 @media (max-width: 768px) {
+
   .hero {
-      align-items: flex-start;
-      min-height: auto;
+    align-items: flex-start;
+    min-height: auto;
   }
 
   .hero .card-img {
-      height: 55vh;
-      object-fit: cover;
-      object-position: center 15%;
+    height: 55vh;          /* hauteur propre */
+    width: 100%;
+    object-fit: cover;     /* crop automatique */
+    object-position: center 10%;   /* tu peux ajuster */
+    display: block;
   }
 
   .card-img-overlay.text {
-      top: 10px;
-      padding-top: 0;
+    top: 15px;
+    padding-top: 0;
   }
 }
+
 
 
 
