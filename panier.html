@@ -30,10 +30,17 @@
     <!-- barre de navigation -->
     <nav class="navbar navbar-expand-lg navigateur sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html#top">
-                <i class="fa-brands fa-cotton-bureau"></i>
-                Cruxix
-            </a>
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand d-flex align-items-center" href="index.html#top">
+                    <i class="fa-brands fa-cotton-bureau me-2"></i> Cruxix
+                </a>
+
+                <!-- Bouton menu mobile (collé au logo) -->
+                <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
+                    aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
             <div class="collapse navbar-collapse justify-content-center" id="navigation">
                 <ul class="navbar-nav nav-underline">
                     <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
@@ -43,12 +50,24 @@
                 </ul>
             </div>
             <!-- Icône Panier -->
-            <a href="#top">
-                <button class="cart-button justify-content-end">
-                    <i class="fa-solid fa-shopping-cart" style="color: var(--color-foreground);"></i>
+            <div class="mobile-cart d-lg-none mt-3">
+                    <a href="#top">
+                        <button class="cart-button" style="color: var(--color-foreground);">
+                            <i class="fa-solid fa-shopping-cart"></i>
+                            <span id="cart-count" class="cart-count">0</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Panier Desktop (hors collapse) -->
+            <a href="#top" class="d-none d-lg-block">
+                <button class="cart-button" style="color: var(--color-foreground);">
+                    <i class="fa-solid fa-shopping-cart"></i>
                     <span id="cart-count" class="cart-count">0</span>
                 </button>
             </a>
+            
 
         </div>
 
