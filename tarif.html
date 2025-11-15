@@ -30,10 +30,12 @@
     </style>
 </head>
 
-<body onload = "compteur()">
+<body onload="compteur()">
     <!-- barre de navigation -->
     <nav class="navbar navbar-expand-lg navigateur sticky-top">
-        <div class="container-fluid">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+
+            <!-- Logo + Bouton menu -->
             <div class="d-flex align-items-center">
                 <a class="navbar-brand d-flex align-items-center" href="index.html#top">
                     <i class="fa-brands fa-cotton-bureau me-2"></i> Cruxix
@@ -45,16 +47,17 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
+
+            <!-- Menu principal -->
             <div class="collapse navbar-collapse justify-content-center" id="navigation">
                 <ul class="navbar-nav nav-underline">
-                    <li class="nav-item"><a href="index.html" class="nav-link ">Home</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="cruxix.html" class="nav-link">Features</a></li>
                     <li class="nav-item"><a href="#top" class="nav-link active">Pricing</a></li>
                     <li class="nav-item"><a href="apropos.html" class="nav-link">Team</a></li>
-
                 </ul>
-            </div>
-                <!-- Panier (placé DANS le collapse) -->
+
+                <!-- Panier Mobile (dans le collapse) -->
                 <div class="mobile-cart d-lg-none mt-3">
                     <a href="panier.html">
                         <button class="cart-button" style="color: var(--color-foreground);">
@@ -74,8 +77,8 @@
             </a>
 
         </div>
-
     </nav>
+
     <!-- section à remplir (CONTENU DE LA PAGE TARIFS AJOUTÉ ICI) -->
     <main class="main-content">
         <div class="container-style">

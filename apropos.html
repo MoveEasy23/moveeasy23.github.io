@@ -24,63 +24,82 @@
 
 
 <body onload="compteur()">
-    <div id="blur-overlay"></div>
+  <div id="blur-overlay"></div>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navigateur sticky-top">
-        <div class="container-fluid">
-            <div class="d-flex align-items-center">
-                <a class="navbar-brand d-flex align-items-center" href="index.html#top">
-                    <i class="fa-brands fa-cotton-bureau me-2"></i> Cruxix
-                </a>
+    <div class="container-fluid d-flex align-items-center justify-content-between">
 
-                <!-- Bouton menu mobile (collé au logo) -->
-                <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
-                    aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse justify-content-center" id="navigation">
-                <ul class="navbar-nav nav-underline">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="cruxix.html" class="nav-link">Features</a></li>
-                    <li class="nav-item"><a href="tarif.html" class="nav-link">Pricing</a></li>
-                    <li class="nav-item"><a href="#top" class="nav-link active">Team</a></li>
-                </ul>
-            </div>
-            <!-- Icône Panier -->
-                <!-- Panier (placé DANS le collapse) -->
-                <div class="mobile-cart d-lg-none mt-3">
-                    <a href="panier.html">
-                        <button class="cart-button" style="color: var(--color-foreground);">
-                            <i class="fa-solid fa-shopping-cart"></i>
-                            <span id="cart-count" class="cart-count">0</span>
-                        </button>
-                    </a>
-                </div>
-            </div>
+      <!-- Logo + bouton menu -->
+      <div class="d-flex align-items-center">
+        <a class="navbar-brand d-flex align-items-center" href="index.html#top">
+          <i class="fa-brands fa-cotton-bureau me-2"></i> Cruxix
+        </a>
 
-            <!-- Panier Desktop (hors collapse) -->
-            <a href="panier.html" class="d-none d-lg-block">
-                <button class="cart-button" style="color: var(--color-foreground);">
-                    <i class="fa-solid fa-shopping-cart"></i>
-                    <span id="cart-count" class="cart-count">0</span>
-                </button>
-            </a>
+        <!-- Bouton menu mobile -->
+        <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
+          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <!-- Menu principal -->
+      <div class="collapse navbar-collapse justify-content-center" id="navigation">
+        <ul class="navbar-nav nav-underline">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="cruxix.html" class="nav-link">Features</a></li>
+          <li class="nav-item"><a href="tarif.html" class="nav-link">Pricing</a></li>
+          <li class="nav-item"><a href="#top" class="nav-link active">Team</a></li>
+        </ul>
+
+        <!-- Panier Mobile (à l'intérieur du collapse) -->
+        <div class="mobile-cart d-lg-none mt-3 text-center">
+          <a href="panier.html">
+            <button class="cart-button" style="color: var(--color-foreground);">
+              <i class="fa-solid fa-shopping-cart"></i>
+              <span id="cart-count" class="cart-count">0</span>
+            </button>
+          </a>
         </div>
-    </nav>
+      </div>
+
+      <!-- Panier Desktop (hors collapse) -->
+      <a href="panier.html" class="d-none d-lg-block">
+        <button class="cart-button" style="color: var(--color-foreground);">
+          <i class="fa-solid fa-shopping-cart"></i>
+          <span id="cart-count" class="cart-count">0</span>
+        </button>
+      </a>
+
+    </div>
+  </nav>
+
 
   <!-- Section Équipe -->
   <main class="container text-center my-5 fade-in" id="team">
     <h1>À propos de notre équipe</h1>
     <p class="lead mx-auto" style="max-width: 700px;">
-      Nous sommes une équipe passionnée composée de cinq membres : <strong>Anthoni, Abdou, Naomi, Adrien et Steven</strong>.
-      Ensemble, nous avons imaginé <strong>Cruxix</strong>, une voiture futuriste capable de conduire de façon totalement autonome,
+      Nous sommes une équipe passionnée composée de cinq membres : <strong>Anthoni, Abdou, Naomi, Adrien et
+        Steven</strong>.
+      Ensemble, nous avons imaginé <strong>Cruxix</strong>, une voiture futuriste capable de conduire de façon
+      totalement autonome,
       combinant design innovant, intelligence artificielle et respect de l'environnement.
     </p>
 
     <div class="team-circle">
+
+      <div id="carouselExampleInterval" class="carousel slide car-center" data-bs-ride="carousel">
+        <div class="carousel-inner rounded-4 shadow-lg">
+          <div class="carousel-item active" data-bs-interval="5000">
+            <img src="img/cruxix_team.jpg" class="d-block w-100 rounded-4" alt="Équipe Cruxix">
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img src="img/icone2.jpg" class="d-block w-100 rounded-4" alt="Voiture futuriste Cruxix">
+          </div>
+        </div>
+      </div>
+
       <!-- Voiture au centre -->
-      <img src="img/icone2.jpg" alt="Voiture futuriste Cruxix" class="car-center">
+      <!-- <img src="img/icone2.jpg" alt="Voiture futuriste Cruxix" class="car-center"> -->
 
       <!-- Bulles des membres -->
       <div class="bubble-card bubble1">
@@ -108,7 +127,7 @@
       </div>
 
       <div class="bubble-card bubble5">
-        <img src="img/icone1.png" alt="Steven" class="bubble-img">
+        <img src="img/steven_cruxix.jpg" alt="Steven" class="bubble-img">
         <div class="bubble-name">Steven</div>
         <div class="bubble-desc">Chef de projet et coordinateur technique.</div>
       </div>
@@ -119,7 +138,8 @@
   <section class="text-center fade-in">
     <h2>Notre mission</h2>
     <p class="mx-auto" style="max-width: 800px;">
-      Cruxix vise à rendre la conduite plus sûre, plus écologique et plus intelligente en combinant design et innovation technologique.
+      Cruxix vise à rendre la conduite plus sûre, plus écologique et plus intelligente en combinant design et innovation
+      technologique.
     </p>
   </section>
 
@@ -137,26 +157,26 @@
     </p>
   </section>
 
-   <footer class="text-center">
-        <p>Copyright 2025@Cruxix</p>
-        <div class="im-footer">
-            <img class="canada" src="img/canada.png" alt="Embleme canada">
-        </div>
-    </footer>
+  <footer class="text-center">
+    <p>Copyright 2025@Cruxix</p>
+    <div class="im-footer">
+      <img class="canada" src="img/canada.png" alt="Embleme canada">
+    </div>
+  </footer>
 
 
-    <!--Script Bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <!-- script fontawesome -->
-    <script src="https://kit.fontawesome.com/d6973d5988.js" crossorigin="anonymous"></script>
-    <!-- scripts javascript -->
-    <script src="scripts/script.js"></script>
-    <script src="scripts/panier.js"></script>
-    <script src="scripts/team.js"></script>
-    <script src="scripts/panier.js"></script>
-    
+  <!--Script Bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <!-- script fontawesome -->
+  <script src="https://kit.fontawesome.com/d6973d5988.js" crossorigin="anonymous"></script>
+  <!-- scripts javascript -->
+  <script src="scripts/script.js"></script>
+  <script src="scripts/panier.js"></script>
+  <script src="scripts/team.js"></script>
+  <script src="scripts/panier.js"></script>
+
 </body>
 
 </html>

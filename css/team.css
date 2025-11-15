@@ -23,6 +23,15 @@ body {
     border-radius: 50%;
 }
 
+/* Uniformise la taille et le format des images du carrousel */
+.car-center .carousel-item img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
 /* Voiture au centre */
 .car-center {
     position: absolute;
@@ -39,8 +48,8 @@ body {
 .bubble-card {
     position: absolute;
     width: 150px;
-    min-height: 150px;  
-    padding: 15px;   
+    min-height: 150px;
+    padding: 15px;
     text-align: center;
     transform: translate(-50%, -50%);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -217,4 +226,29 @@ a {
         right: auto;
         bottom: auto;
     }
+
+    .car-center {
+        width: 150px;
+    }
+
+    .car-center {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin: 0 auto 20px auto;
+        width: 85%;
+        max-width: 320px;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 0 25px rgba(186, 104, 200, 0.4);
+    }
+
+    .car-center .carousel-item img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
 }

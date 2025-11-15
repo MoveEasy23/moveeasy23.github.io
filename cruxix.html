@@ -29,19 +29,20 @@
 <body onload="compteur()">
     <!-- barre de navigation -->
     <nav class="navbar navbar-expand-lg navigateur sticky-top">
-        <div class="container-fluid">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+
+            <!-- Logo + Bouton menu -->
             <div class="d-flex align-items-center">
                 <a class="navbar-brand d-flex align-items-center" href="index.html#top">
                     <i class="fa-brands fa-cotton-bureau me-2"></i> Cruxix
                 </a>
-
-                <!-- Bouton menu mobile (collé au logo) -->
                 <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
                     aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
 
+            <!-- Menu principal -->
             <div class="collapse navbar-collapse justify-content-center" id="navigation">
                 <ul class="navbar-nav nav-underline">
                     <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
@@ -49,31 +50,29 @@
                     <li class="nav-item"><a href="tarif.html" class="nav-link">Pricing</a></li>
                     <li class="nav-item"><a href="apropos.html" class="nav-link">Team</a></li>
                 </ul>
+
+                <!-- Panier Mobile -->
+                <div class="mobile-cart d-lg-none mt-3">
+                    <a href="panier.html">
+                        <button class="cart-button" style="color: var(--color-foreground);">
+                            <i class="fa-solid fa-shopping-cart"></i>
+                            <span id="cart-count" class="cart-count">0</span>
+                        </button>
+                    </a>
+                </div>
             </div>
-            <!-- Icône Panier -->
-            <!-- Panier (placé DANS le collapse) -->
-            <div class="mobile-cart d-lg-none mt-3">
-                <a href="panier.html">
-                    <button class="cart-button" style="color: var(--color-foreground);">
-                        <i class="fa-solid fa-shopping-cart"></i>
-                        <span id="cart-count" class="cart-count">0</span>
-                    </button>
-                </a>
-            </div>
-        </div>
 
-        <!-- Panier Desktop (hors collapse) -->
-        <a href="panier.html" class="d-none d-lg-block">
-            <button class="cart-button" style="color: var(--color-foreground);">
-                <i class="fa-solid fa-shopping-cart"></i>
-                <span id="cart-count" class="cart-count">0</span>
-            </button>
-        </a>
+            <!-- Panier Desktop -->
+            <a href="panier.html" class="d-none d-lg-block">
+                <button class="cart-button" style="color: var(--color-foreground);">
+                    <i class="fa-solid fa-shopping-cart"></i>
+                    <span id="cart-count" class="cart-count">0</span>
+                </button>
+            </a>
 
         </div>
-
-
     </nav>
+
     <!-- section à remplir -->
     <main class="container-md">
 

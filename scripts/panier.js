@@ -54,22 +54,25 @@ function supprimerElement(identifiant) {
     location.reload();
 }
 
-function compteur(){
-     let compteur=0
+function compteur() {
+    let compteur = 0;
+    let indice = 1;
 
-     let indice = 1
+    while (indice <= 4) {
+        if (sessionStorage.getItem('name' + indice) != null) {
+            compteur++;
+        }
+        indice++;
+    }
 
-     while(indice <= 4){
-          if(sessionStorage.getItem('name' + indice) != null){
-               compteur++
-          }
-          indice++
-     }
+    sessionStorage.setItem("compteur", compteur);
 
-    sessionStorage.setItem("compteur", compteur)
-    document.getElementById("cart-count").innerText = sessionStorage.getItem("compteur")
-
+    let spans = document.getElementsByClassName("cart-count");
+    for (let i = 0; i < spans.length; i++) {
+        spans[i].innerText = compteur;
+    }
 }
+
 
 function viderPanier(){
      sessionStorage.clear()
