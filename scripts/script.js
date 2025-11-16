@@ -3,7 +3,7 @@
         const pricingPlans = [
             {
                 title: "Standard",
-                price: 45000,
+                price: 65000,
                 features: [
                     "Conduite autonome niveau 5",
                     "Autonomie 400 km",
@@ -18,7 +18,7 @@
             },
             {
                 title: "Plus", 
-                price: 65000,
+                price: 75000,
                 features: [
                     "Toutes fonctionnalités Standard",
                     "Autonomie étendue 600 km",
@@ -34,7 +34,7 @@
             },
             {
                 title: "Pro",
-                price: 95000,
+                price: 90000,
                 features: [
                     "Toutes fonctionnalités Plus",
                     "Pack sportif performance",
@@ -51,7 +51,7 @@
             },
             {
                 title: "Luxury", // Nouvelle carte Luxury
-                price: 120000,
+                price: 135000,
                 features: [
                     "Toutes fonctionnalités Pro",
                     "Autonomie illimitée (750 km)",
