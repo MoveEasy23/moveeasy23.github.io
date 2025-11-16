@@ -146,7 +146,7 @@
                             <h3 class="pricing-card-title">${plan.title}</h3>
                             <div class="pricing-card-price">
                                 <span class="gradient-text">${priceFormatted}</span>
-                                <span class="pricing-card-currency">$</span>
+                                <span class="pricing-card-currency">US $</span>
                             </div>
                         </div>
                         <div class="pricing-card-features">
