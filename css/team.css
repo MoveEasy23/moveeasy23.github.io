@@ -1,135 +1,254 @@
 body {
-      font-family: 'Cormorant Infant', serif;
-      color: #fff;
-      overflow-x: hidden;
-      min-height: 100vh;
-    }
+    font-family: 'Cormorant Infant', serif;
+    color: #fff;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
 
 
 
-    /* Section équipe */
-    #team h1 {
-      color: #ba68c8;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
+/* Section équipe */
+#team h1 {
+    color: #ba68c8;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
 
+
+.team-circle {
+    position: relative;
+    width: 800px;
+    height: 800px;
+    margin: 120px auto 50px auto;
+    border-radius: 50%;
+}
+
+/* Uniformise la taille et le format des images du carrousel */
+.car-center .carousel-item img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
+/* Voiture au centre */
+.car-center {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(186, 104, 200, 0.5);
+    z-index: 1;
+}
+
+.bubble-card {
+    position: absolute;
+    width: 150px;
+    min-height: 150px;
+    padding: 15px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* Hover: agrandissement sans shadow */
+.bubble-card:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    z-index: 20;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 15px rgba(160, 120, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+
+
+body:has(.bubble-card:hover) #blur-overlay {
+    z-index: 10;
+    width: max-content;
+    height: ma;
+    margin: -5px auto;
+    background: radial-gradient(ellipse at center, rgba(7, 7, 7, 0.4) 5%, transparent 20%);
+    filter: blur(8px);
+}
+
+.bubble-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ba68c8;
+    margin-bottom: 0.5rem;
+    transition: transform 0.4s ease;
+}
+
+.bubble-card:hover .bubble-img {
+    transform: scale(1.1);
+}
+
+/* Texte des bulles masqué par défaut */
+.bubble-name,
+.bubble-desc {
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.bubble-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #a970ff, #5d67e8);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Affiche le texte au survol de la bulle */
+.bubble-card:hover .bubble-name,
+.bubble-card:hover .bubble-desc {
+    opacity: 1;
+}
+
+/* Placement symétrique des bulles en cercle */
+.bubble1 {
+    top: 5%;
+    left: 50%;
+}
+
+.bubble2 {
+    top: 20%;
+    left: 88%;
+}
+
+.bubble3 {
+    top: 78%;
+    left: 82%;
+}
+
+.bubble4 {
+    top: 78%;
+    left: 18%;
+}
+
+.bubble5 {
+    top: 20%;
+    left: 12%;
+}
+
+/* Section texte */
+section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+h2 {
+    color: #ba68c8;
+    margin-bottom: 20px;
+}
+
+
+a {
+    color: #ba68c8;
+    text-decoration: none;
+}
+
+/* Animation d’apparition */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+@media (max-width: 992px) {
     .team-circle {
-      position: relative;
-      width: 800px;
-      height: 800px;
-      margin: 50px auto;
-      border-radius: 50%;
-    }
-
-    /* Voiture au centre */
-    .car-center {
-      position: absolute;
-      top: 42%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 500px;
-      height: auto;
-      border-radius: 15px;
-      box-shadow: 0 0 30px rgba(186, 104, 200, 0.5);
-      z-index: 1;
+        width: 450px;
+        height: 450px;
     }
 
     .bubble-card {
-      position: absolute;
-      width: 150px;
-      height: 150px;
-      text-align: center;
-      transform: translate(-50%, -50%);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      z-index: 2;
-      cursor: pointer;
+        width: 120px;
+        font-size: 0.9rem;
     }
 
-    /* Hover: agrandissement sans shadow */
-    .bubble-card:hover {
-      transform: translate(-50%, -50%) scale(1.1);
+    .car-center {
+        width: 150px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .team-circle {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 40px;
     }
 
-    .bubble-img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 3px solid #ba68c8;
-      margin-bottom: 0.5rem;
-      transition: transform 0.4s ease;
+    .car-center {
+        position: relative;
+        width: 140px;
+        margin: 0 auto 20px auto;
+        transform: none;
+        top: 0;
+        left: 0;
     }
 
-    .bubble-card:hover .bubble-img {
-      transform: scale(1.1);
+    .bubble-card {
+        position: relative;
+        width: 85%;
+        max-width: 350px;
+        margin: 0 auto;
+        transform: none !important;
     }
 
-    /* Texte des bulles masqué par défaut */
-    .bubble-name,
-    .bubble-desc {
-      color: #fff;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    /* Affiche le texte au survol de la bulle */
-    .bubble-card:hover .bubble-name,
-    .bubble-card:hover .bubble-desc {
-      opacity: 1;
-    }
-
-    /* Placement symétrique des bulles en cercle */
-    .bubble1 {
-      top: 5%;
-      left: 50%;
-    }
-
-    .bubble2 {
-      top: 20%;
-      left: 88%;
-    }
-
-    .bubble3 {
-      top: 78%;
-      left: 82%;
-    }
-
-    .bubble4 {
-      top: 78%;
-      left: 18%;
-    }
-
+    /* On enlève toutes les positions absolues */
+    .bubble1,
+    .bubble2,
+    .bubble3,
+    .bubble4,
     .bubble5 {
-      top: 20%;
-      left: 12%;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
     }
 
-    /* Section texte */
-    section {
-      padding-top: 60px;
-      padding-bottom: 60px;
+    .car-center {
+        width: 150px;
     }
 
-    h2 {
-      color: #ba68c8;
-      margin-bottom: 20px;
+    .car-center {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin: 0 auto 20px auto;
+        width: 85%;
+        max-width: 320px;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 0 25px rgba(186, 104, 200, 0.4);
     }
 
-
-    a {
-      color: #ba68c8;
-      text-decoration: none;
+    .car-center .carousel-item img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 15px;
     }
 
-    /* Animation d’apparition */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.8s ease;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+}

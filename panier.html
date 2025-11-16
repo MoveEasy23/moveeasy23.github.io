@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cruxix</title>
-    <link rel="icon" href="images/icone1.png">
+    <link rel="icon" href="img/icone1.png">
     <meta name="author" content="Anthoni Abdou Naomi Adrien Steven">
     <!--Détection de la taille d'affichage-->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,11 +29,22 @@
 <body onload="afficherPanier(), compteur()">
     <!-- barre de navigation -->
     <nav class="navbar navbar-expand-lg navigateur sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html#top">
-                <i class="fa-brands fa-cotton-bureau"></i>
-                Cruxix
-            </a>
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+
+            <!-- Logo + bouton menu -->
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand d-flex align-items-center" href="index.html#top">
+                    <i class="fa-brands fa-cotton-bureau me-2"></i> Cruxix
+                </a>
+
+                <!-- Bouton menu mobile -->
+                <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
+                    aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <!-- Menu principal -->
             <div class="collapse navbar-collapse justify-content-center" id="navigation">
                 <ul class="navbar-nav nav-underline">
                     <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
@@ -41,18 +52,29 @@
                     <li class="nav-item"><a href="tarif.html" class="nav-link">Pricing</a></li>
                     <li class="nav-item"><a href="apropos.html" class="nav-link">Team</a></li>
                 </ul>
+
+                <!-- Panier mobile (dans le collapse) -->
+                <div class="mobile-cart d-lg-none mt-3 text-center">
+                    <a href="#top">
+                        <button class="cart-button" style="color: var(--color-foreground);">
+                            <i class="fa-solid fa-shopping-cart"></i>
+                            <span id="cart-count" class="cart-count">0</span>
+                        </button>
+                    </a>
+                </div>
             </div>
-            <!-- Icône Panier -->
-            <a href="#top">
-                <button class="cart-button justify-content-end">
-                    <i class="fa-solid fa-shopping-cart" style="color: var(--color-foreground);"></i>
+
+            <!-- Panier desktop (hors collapse) -->
+            <a href="#top" class="d-none d-lg-block">
+                <button class="cart-button" style="color: var(--color-foreground);">
+                    <i class="fa-solid fa-shopping-cart"></i>
                     <span id="cart-count" class="cart-count">0</span>
                 </button>
             </a>
 
         </div>
-
     </nav>
+
 
     <main>
         <div class="row ">
@@ -73,6 +95,9 @@
                     <span id="prixTotal">39.98 $</span>
                 </div>
                 <button class="btn btn-primary w-100 mt-3">Passer au paiement</button>
+                <i class="fa-brands fa-cc-visa pt-4"></i>
+                <i class="fa-brands fa-cc-mastercard"></i>
+                <i class="fa-brands fa-cc-paypal"></i>
             </div>
 
 

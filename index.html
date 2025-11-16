@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cruxix</title>
-    <link rel="icon" href="images/icone1.png">
+    <link rel="icon" href="img/icone1.png">
     <meta name="author" content="Anthoni Abdou Naomi Adrien Steven">
     <!--Détection de la taille d'affichage-->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -28,14 +28,25 @@
 
 </head>
 
-<body onload = "compteur()">
+<body onload="compteur()">
     <!-- barre de navigation -->
     <nav class="navbar navbar-expand-lg navigateur sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html#top">
-                <i class="fa-brands fa-cotton-bureau"></i>
-                Cruxix
-            </a>
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+
+            <!-- Logo -->
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand d-flex align-items-center" href="index.html#top">
+                    <i class="fa-brands fa-cotton-bureau me-2"></i> Cruxix
+                </a>
+
+                <!-- Bouton menu mobile (collé au logo) -->
+                <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
+                    aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <!-- Menu -->
             <div class="collapse navbar-collapse justify-content-center" id="navigation">
                 <ul class="navbar-nav nav-underline">
                     <li class="nav-item"><a href="#top" class="nav-link active">Home</a></li>
@@ -43,16 +54,29 @@
                     <li class="nav-item"><a href="tarif.html" class="nav-link">Pricing</a></li>
                     <li class="nav-item"><a href="apropos.html" class="nav-link">Team</a></li>
                 </ul>
+
+                <!-- Panier (placé DANS le collapse) -->
+                <div class="mobile-cart d-lg-none mt-3">
+                    <a href="panier.html">
+                        <button class="cart-button" style="color: var(--color-foreground);">
+                            <i class="fa-solid fa-shopping-cart"></i>
+                            <span id="cart-count" class="cart-count">0</span>
+                        </button>
+                    </a>
+                </div>
             </div>
-            <!-- Icône Panier -->
-            <a href="panier.html">
-                <button class="cart-button justify-content-end">
-                    <i class="fa-solid fa-shopping-cart" style="color: var(--color-foreground);"></i>
+
+            <!-- Panier Desktop (hors collapse) -->
+            <a href="panier.html" class="d-none d-lg-block">
+                <button class="cart-button" style="color: var(--color-foreground);">
+                    <i class="fa-solid fa-shopping-cart"></i>
                     <span id="cart-count" class="cart-count">0</span>
                 </button>
             </a>
+
         </div>
     </nav>
+
     <header>
         <section class="hero">
             <div class="card text-bg-dark border-0 position-relative">
@@ -62,11 +86,11 @@
                 <div class="card-img-overlay text text-center top-overlay">
                     <h1 class="card-title">Car driving Concept<br><span>Redefined!</span></h1>
                     <p class="card-text">
-                        This is a wider card with supporting text below as a natural lead-in to additional content.
-                        This content is a little bit longer.
+                        Where technology meets serenity, Cruxix reinvents the way you travel. 
+                        The future now drives for you.
                     </p>
-                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
-                    <a href="#" class="btn btn-light">Get Started</a>
+                    <p class="card-text"><small>Future Moves Itself</small></p>
+                    <a href="cruxix.html" class="btn btn-light">Get Started</a>
                 </div>
             </div>
         </section>
