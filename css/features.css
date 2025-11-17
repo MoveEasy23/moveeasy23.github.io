@@ -88,7 +88,7 @@ main {
     border: 2px solid #531658;
     border-radius: 8px;
     text-align: center;
-    padding: 30px 15px; /* plus d’espace vertical */
+    padding: 30px 15px;
     box-shadow: 2px 5px 30px #d400ff;
     margin-top: 200px;
 }
@@ -127,6 +127,19 @@ main {
 
 }
 
+main div div span{
+    display: block;
+    color: rgb(240, 232, 232);
+    font-weight: bold;
+    margin-bottom: 40px auto;
+    font-size: larger;
+    
+}
+main div p{
+    text-align: justify;
+    max-width: 85%;
+    margin: auto;
+}
 
 
 @media (max-width: 992px) {
