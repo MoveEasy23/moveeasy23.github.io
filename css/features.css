@@ -7,6 +7,7 @@ main {
     align-items: start;
     max-width: 1200px;
     margin: 30px auto;
+    row-gap: 100px;
 
 }
 
@@ -91,6 +92,7 @@ main {
     padding: 30px 15px;
     box-shadow: 2px 5px 30px #d400ff;
     margin-top: 200px;
+    padding-bottom: 30px;
 }
 
 
@@ -116,6 +118,7 @@ main {
     text-align: center;
     padding: 15px;
     box-shadow: 2px 5px 30px #d400ff;
+    padding-top: 50px;
 
 }
 
