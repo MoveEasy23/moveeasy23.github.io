@@ -1,3 +1,43 @@
+# CRUXIX
+
+## Concept
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 -Nom de L'équipe: MoveEasy23
 
 -Nom des membres:
