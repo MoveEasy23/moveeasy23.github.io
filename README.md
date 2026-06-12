@@ -1,4 +1,4 @@
-# COncept
+# Overview
 Cruxix is a next-generation autonomous vehicle concept designed for a future where driving is no longer a human responsibility.
 
 
