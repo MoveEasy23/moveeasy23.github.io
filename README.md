@@ -1,57 +1,58 @@
-# Overview
-Cruxix is a next-generation autonomous vehicle concept designed for a future where driving is no longer a human responsibility.
+## Cruxix
+
+### Overview
+
+Cruxix was a collaborative project focused on creating a website that showcases a futuristic autonomous vehicle concept. The vehicle was imagined as a fully self-driving car without a steering wheel, designed around passenger comfort, productivity, and experience rather than traditional driving controls.
+
+### Project Objective
+
+The primary objective was to design and develop a website that effectively communicated our vision of future mobility. Through the website, we presented the concept, its features, design philosophy, and the potential impact of autonomous technology on transportation.
+
+### Website Features
+
+* Presentation of the Cruxix vehicle concept
+* Explanation of autonomous driving principles
+* Interactive and modern user interface
+* Visual storytelling to communicate the project's vision
+* Responsive design for multiple devices
+* Structured content highlighting key features and benefits
+
+### Team Collaboration
+
+This project was intentionally developed as a group effort to simulate a professional work environment. Team members were required to collaborate under deadlines, coordinate tasks, and make collective decisions throughout the development process.
+
+Working on Cruxix helped us:
+
+* Improve communication within a team
+* Learn how to make compromises when opinions differed
+* Manage responsibilities and workloads effectively
+* Adapt to project constraints and deadlines
+* Deliver a cohesive final product under pressure
+
+### Skills Developed
+
+* Web Design
+* UI/UX Thinking
+* Project Planning
+* Team Collaboration
+* Communication
+* Problem Solving
+* Time Management
+* Presentation and Storytelling
+
+### Outcome
+
+Cruxix successfully demonstrated how a website can be used to communicate an innovative technological vision. Beyond the final product, the project provided valuable experience in teamwork, collaboration, and delivering results in a deadline-driven environment.
 
 
-### Why?
-The project explores a simple but powerful question: What would a car look like if nobody ever had to drive it?
-For over a century, vehicles have been built around the driver. Steering wheels, pedals, dashboards, mirrors, and seating layouts all exist because a human is expected to control the vehicle. Cruxix challenges this assumption and reimagines the automobile as a fully autonomous living space designed around people rather than drivers.
+
+-Team Name: MoveEasy23
+
+-Group members:
+    - Naomi Nsankong : @Nsankong
+    - Antoni Keyrouz : @antonikeyrouz
+    - Adrien Jonathan Amvame Amougou : @junesekai
+    - Abdou Bassirou Bassirou B Daouda : @abassiro
+    - Steven Pitalinam Atchall : @Screadman
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
--Nom de L'équipe: MoveEasy23
-
--Nom des membres:
-    - Naomi Nsankong : 300356860
-    - Antoni Keyrouz : 300478552
-    - Adrien Jonathan Amvame Amougou : 300514663
-    - Abdou Bassirou Bassirou B Daouda : 300505710
-    - Steven Pitalinam Atchall : 300497120
-
-Nom Du produit : Cruxix
-
-Description: Il s'agit d'un concept de réinvention du véhicule automobile. 
-Cruxix est une voiture intelligente ayant la particularité de ne pas avoir de volant et de se recharger en se déplaçant.  
