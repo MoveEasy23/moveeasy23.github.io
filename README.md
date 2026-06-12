@@ -56,3 +56,4 @@ Cruxix successfully demonstrated how a website can be used to communicate an inn
     - Steven Pitalinam Atchall : @Screadman
 
 
+<img width="2432" height="1302" alt="image" src="https://github.com/user-attachments/assets/b8a4f106-18b6-4f56-8ce6-afd9564069e7" />
