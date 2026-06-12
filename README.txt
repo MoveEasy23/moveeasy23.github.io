@@ -1,6 +1,10 @@
-# CRUXIX
+# COncept
+Cruxix is a next-generation autonomous vehicle concept designed for a future where driving is no longer a human responsibility.
 
-## Concept
+
+### Why?
+The project explores a simple but powerful question: What would a car look like if nobody ever had to drive it?
+For over a century, vehicles have been built around the driver. Steering wheels, pedals, dashboards, mirrors, and seating layouts all exist because a human is expected to control the vehicle. Cruxix challenges this assumption and reimagines the automobile as a fully autonomous living space designed around people rather than drivers.
 
 
 
