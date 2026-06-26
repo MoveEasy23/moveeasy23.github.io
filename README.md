@@ -2,8 +2,6 @@
 
 ### Overview
 
-Cruxix was a collaborative project focused on creating a website that showcases a futuristic autonomous vehicle concept. The vehicle was imagined as a fully self-driving car without a steering wheel, designed around passenger comfort, productivity, and experience rather than traditional driving controls.
-
 ### Project Objective
 
 The primary objective was to design and develop a website that effectively communicated our vision of future mobility. Through the website, we presented the concept, its features, design philosophy, and the potential impact of autonomous technology on transportation.
